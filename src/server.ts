@@ -19,6 +19,10 @@ app.register(registerForEvent);
 app.register(getEvent);
 app.register(getAttendeeBadge);
 
+app.get('/test', async (request, reply) => {
+  return { message: 'Está funcionando' };
+});
+
 app.listen({ port: 3333 }).then(() => {
   console.log('http server running!');
 });

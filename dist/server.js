@@ -16,6 +16,9 @@ app.register(create_event_1.createEvent);
 app.register(register_for_event_1.registerForEvent);
 app.register(get_event_1.getEvent);
 app.register(get_attendee_badge_1.getAttendeeBadge);
+app.get('/test', async (request, reply) => {
+    return { message: 'Está funcionando' };
+});
 app.listen({ port: 3333 }).then(() => {
     console.log('http server running!');
 });
