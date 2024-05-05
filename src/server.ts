@@ -28,6 +28,10 @@ app.register(getAttendeeBadge);
 app.register(checkIn);
 app.register(getEventAttendees);
 
+app.get('/test', async (request, reply) => {
+  return { message: 'This is a test route' };
+});
+
 app.listen({ port: 3333, host: '0.0.0.0' }).then(() => {
   console.log('http server running!');
 });
